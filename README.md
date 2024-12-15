@@ -7,7 +7,7 @@ It's great to meet you. I'm a long-time software engineer.
 - 📫 How to reach me: alexandre@pm.me (personal) || alexandre@seenons.com (work)
 - 💻 You can see what I've written about on my [personal website](https://medium.com/@arielquixote)
 
-[![alex's GitHub stats](https://github-readme-stats.vercel.app/api?username=alex-quiterio)](https://github.com/alex-quiterio)
+[![alex's GitHub stats](https://github-readme-stats.vercel.app/api?username=alex-quiterio&theme=tokyonight)](https://github.com/alex-quiterio)
 
 <!--
 **alex-quiterio/alex-quiterio** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
