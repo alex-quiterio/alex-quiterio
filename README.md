@@ -1,4 +1,4 @@
-## Olá, I'm alex!
+## Olá, I'm alex ☘️
 
 
 It's great to meet you. I'm a long-time software engineer.
