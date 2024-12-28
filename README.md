@@ -3,7 +3,7 @@
 
 It's great to meet you. I'm a long-time software engineer.
 
-- 🛠️ I’m currently working at [Seenons](www.seenons.com) as a leading software engineer.
+- 🛠️ I’m currently working at [Seenons](https://seenons.com/en) as a leading software engineer.
 - 📫 How to reach me: alexandre@pm.me (personal) || alexandre@seenons.com (work)
 - 💻 You can see what I've written about on my [personal website](https://medium.com/@arielquixote)
 
