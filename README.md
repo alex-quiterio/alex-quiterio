@@ -18,7 +18,7 @@
 
 ```yaml
 callsign:   alex-quiterio
-rank:       leading software engineer @ Seenons
+rank:       Staff engineer @ Seenons
 specialty:  AI engineering · building with AI · AI factories
 base:       Amsterdam, Earth
 orbit:      long-time builder of systems that hold under load
