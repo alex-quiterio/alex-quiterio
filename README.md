@@ -3,7 +3,7 @@
 # Ola! I'm alex ☘️
 
 <a href="https://github.com/alex-quiterio">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&duration=3200&pause=900&color=7EE787&center=true&vCenter=true&width=640&lines=Software+engineer+%C2%B7+cosmonaut+of+the+codebase;Building+AI+factories%3A+agents+that+ship+software;Writing+consensus+protocols+from+scratch+in+Rust;Shipping+from+Amsterdam+since+2011;Wondering...+finding+active+hope+%F0%9F%8C%BF" alt="mission log" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&duration=3200&pause=900&color=7EE787&center=true&vCenter=true&width=640&lines=Staff+engineer+%C2%B7+cosmonaut+of+the+codebase;Building+AI+factories%3A+agents+that+ship+software;Writing+consensus+protocols+from+scratch+in+Rust;Shipping+from+Amsterdam+since+2011;Wondering...+finding+active+hope+%F0%9F%8C%BF" alt="mission log" />
 </a>
 
 ![Base](https://img.shields.io/badge/base-Amsterdam-0b0d17?style=for-the-badge&logo=rocket&logoColor=white)
