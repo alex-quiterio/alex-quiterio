@@ -71,7 +71,7 @@ status:     🟢 nominal · always building something
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/alex-quiterio/alex-quiterio/main/metrics.isocalendar.svg" alt="Contribution calendar and streaks" />
+<img src="metrics.isocalendar.svg" alt="Contribution calendar and streaks" />
 
 </div>
 
