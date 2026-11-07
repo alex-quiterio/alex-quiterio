@@ -6,29 +6,25 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths-ignore: ["profile-3d-contrib/**"]
+    paths-ignore: ["telemetry/**"]
 
 permissions:
   contents: write
 
 jobs:
-  skyline:
+  streak:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - uses: yoshi389111/github-profile-3d-contrib@v0.9.3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: ${{ github.repository_owner }}
       - name: Render streak card
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/streak.py "${{ github.repository_owner }}" profile-3d-contrib/streak.svg
-      - name: Commit the images
+        run: python3 scripts/streak.py "${{ github.repository_owner }}" telemetry/streak.svg
+      - name: Commit the card
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add -A profile-3d-contrib
-          if git commit -m "Update telemetry skyline"; then
+          git add -A telemetry
+          if git commit -m "Update streak card"; then
             git push
           fi
