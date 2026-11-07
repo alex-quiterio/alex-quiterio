@@ -72,6 +72,7 @@ status:     🟢 nominal · always building something
 <div align="center">
 
 <img src="profile-3d-contrib/profile-night-view.svg" alt="Contributions as a 3D night skyline" />
+<img src="profile-3d-contrib/streak.svg" alt="Contribution streak" />
 
 </div>
 
