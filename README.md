@@ -71,7 +71,7 @@ status:     🟢 nominal · always building something
 
 <div align="center">
 
-[![GitHub Streak](https://streak-stats.demolab.com/?user=alex-quiterio&theme=tokyonight&hide_border=true)](https://streak-stats.demolab.com/?user=alex-quiterio)
+<img src="https://raw.githubusercontent.com/alex-quiterio/alex-quiterio/main/metrics.isocalendar.svg" alt="Contribution calendar and streaks" />
 
 </div>
 
