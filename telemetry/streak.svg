@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="250" viewBox="0 0 1280 250">
+<title>Contribution streak: 35 days current, 35 days longest, 22,794 total</title>
+<style>
+  * { font-family: "Ubuntu", "Helvetica", "Arial", sans-serif; }
+  .num { font-size: 54px; font-weight: 700; fill: #eeeeff; }
+  .big { font-size: 64px; font-weight: 700; fill: rgb(255,200,55); }
+  .label { font-size: 22px; fill: #eeeeff; letter-spacing: 1px; }
+  .sub { font-size: 17px; fill: #aaaaaa; }
+  .ring { animation: draw 1.6s ease-out forwards; }
+  @keyframes draw { from { stroke-dashoffset: 534; } to { stroke-dashoffset: 0; } }
+</style>
+<defs>
+  <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#39c5ff"/>
+    <stop offset="1" stop-color="#1f6feb"/>
+  </linearGradient>
+  <radialGradient id="glow">
+    <stop offset="0" stop-color="#1f6feb" stop-opacity="0.35"/>
+    <stop offset="1" stop-color="#1f6feb" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="1280" height="250" rx="12" fill="#00000f"/>
+<circle cx="60" cy="40" r="1.2" fill="#eeeeff" opacity="0.6"/><circle cx="180" cy="210" r="1" fill="#eeeeff" opacity="0.4"/><circle cx="330" cy="30" r="1.4" fill="#eeeeff" opacity="0.7"/><circle cx="520" cy="220" r="1" fill="#eeeeff" opacity="0.5"/><circle cx="760" cy="26" r="1.2" fill="#eeeeff" opacity="0.5"/><circle cx="910" cy="214" r="1.4" fill="#eeeeff" opacity="0.6"/><circle cx="1080" cy="48" r="1" fill="#eeeeff" opacity="0.4"/><circle cx="1220" cy="200" r="1.2" fill="#eeeeff" opacity="0.7"/><circle cx="1240" cy="30" r="1" fill="#eeeeff" opacity="0.5"/><circle cx="450" cy="120" r="0.8" fill="#eeeeff" opacity="0.3"/><circle cx="830" cy="130" r="0.8" fill="#eeeeff" opacity="0.3"/><circle cx="40" cy="190" r="1" fill="#eeeeff" opacity="0.4"/>
+<line x1="427" y1="50" x2="427" y2="200" stroke="#aaaaaa" stroke-opacity="0.25"/>
+<line x1="853" y1="50" x2="853" y2="200" stroke="#aaaaaa" stroke-opacity="0.25"/>
+
+<g text-anchor="middle">
+  <text x="213" y="112" class="num">22,794</text>
+  <text x="213" y="152" class="label">Total contributions</text>
+  <text x="213" y="182" class="sub">Dec 27, 2011 – present</text>
+</g>
+
+<g text-anchor="middle">
+  <circle cx="640" cy="98" r="110" fill="url(#glow)"/>
+  <circle cx="640" cy="98" r="85" fill="none" stroke="#1f6feb" stroke-opacity="0.2" stroke-width="8"/>
+  <circle class="ring" cx="640" cy="98" r="85" fill="none" stroke="url(#ringGrad)" stroke-width="8"
+          stroke-linecap="round" stroke-dasharray="534" transform="rotate(-90 640 98)"/>
+  <text x="640" y="118" class="big">35</text>
+  <text x="640" y="215" class="label" fill="rgb(255,200,55)" style="fill:rgb(255,200,55)">Current streak</text>
+  <text x="640" y="240" class="sub">Oct 4 – Nov 7, 2026</text>
+</g>
+
+<g text-anchor="middle">
+  <text x="1067" y="112" class="num">35</text>
+  <text x="1067" y="152" class="label">Longest streak</text>
+  <text x="1067" y="182" class="sub">Oct 4 – Nov 7, 2026</text>
+</g>
+</svg>
