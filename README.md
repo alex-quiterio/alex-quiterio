@@ -71,7 +71,7 @@ status:     🟢 nominal · always building something
 
 <div align="center">
 
-<img src="metrics.isocalendar.svg" alt="Contribution calendar and streaks" />
+<img src="profile-3d-contrib/profile-night-view.svg" alt="Contributions as a 3D night skyline" />
 
 </div>
 
