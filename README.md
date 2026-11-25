@@ -43,6 +43,7 @@ status:     🟢 nominal · always building something
 | ⛓️ [**blockchain-rs**](https://github.com/alex-quiterio/blockchain-rs) | Rust | A cryptocurrency built from first principles: proof of work *and* proof of stake, RANDAO beacons, Merkle proofs, gossiping peers, and a web UI that explains every block. |
 | 🔥 [**hearth**](https://github.com/alex-quiterio/hearth) | TypeScript · Claude | A local dashboard with Claude in a side panel, running the same agent skills as the terminal. |
 | 🌿 [**oikos**](https://github.com/alex-quiterio/oikos) | TypeScript · Vue | Explorable maps of how energy, nutrients and seeds move through an ecosystem: scenarios, a live health meter, keystone analysis, and every flow marked documented, likely, debated or unknown. [Try it live](https://alex-quiterio.github.io/oikos/). |
+| 🧭 [**wayfarers-atlas**](https://github.com/alex-quiterio/wayfarers-atlas) | Web | A map of a notebook: an interactive atlas you can install as an app. [Open the atlas](https://alex-quiterio.github.io/wayfarers-atlas/). |
 | 🐦 [**murmuration**](https://github.com/alex-quiterio/murmuration) | TypeScript | Starling murmurations as boids with topological k-nearest neighbours: emergent flight, simulated. |
 | λ [**ttinylisp**](https://github.com/alex-quiterio/ttinylisp) | JavaScript | A Lisp interpreter, small enough to read in one sitting. |
 | 🧮 [**At-Compiler**](https://github.com/alex-quiterio/At-Compiler) | C++ | A compiler built on Lex and Yacc. |
