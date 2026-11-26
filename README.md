@@ -79,13 +79,13 @@ Public repositories, by kind (tap a group to open it). Live demos are linked whe
 
 | Repo | Stack | What it is |
 | --- | --- | --- |
-| [**beeline**](https://github.com/alex-quiterio/beeline) | Rust | Autonomous drone simulator: A* planning, bee-inspired optic-flow navigation, PX4-style collision prevention. |
-| [**peekaboo**](https://github.com/alex-quiterio/peekaboo) | Rust · TypeScript | Read-only, privacy-conscious home network audit. |
-| [**rusty-diary**](https://github.com/alex-quiterio/rusty-diary) | Rust | A diary application for securely recording daily entries. |
-| [**lock-guard**](https://github.com/alex-quiterio/lock-guard) | Swift | Tells you if someone touched your Mac while the screen was locked. |
-| [**precog-trend-radar**](https://github.com/alex-quiterio/precog-trend-radar) | TypeScript | A morning brief of world attention trends. Tracks topics, never people. |
-| [**oikos**](https://alex-quiterio.github.io/oikos/) | TypeScript | Explorable maps of energy, nutrient and seed flows through eleven ecosystems, with unknowns marked. |
-| [**cybernetics-field-guide**](https://github.com/alex-quiterio/cybernetics-field-guide) | HTML | Interactive field guide to cybernetics with working models. |
+| <img src="assets/logos/beeline.svg" width="32" height="32" alt=""> [**beeline**](https://github.com/alex-quiterio/beeline) | Rust | Autonomous drone simulator: A* planning, bee-inspired optic-flow navigation, PX4-style collision prevention. |
+| <img src="assets/logos/peekaboo.svg" width="32" height="32" alt=""> [**peekaboo**](https://github.com/alex-quiterio/peekaboo) | Rust · TypeScript | Read-only, privacy-conscious home network audit. |
+| <img src="assets/logos/rusty-diary.svg" width="32" height="32" alt=""> [**rusty-diary**](https://github.com/alex-quiterio/rusty-diary) | Rust | A diary application for securely recording daily entries. |
+| <img src="assets/logos/lock-guard.png" width="32" height="32" alt=""> [**lock-guard**](https://github.com/alex-quiterio/lock-guard) | Swift | Tells you if someone touched your Mac while the screen was locked. |
+| <img src="assets/logos/precog-trend-radar.svg" width="32" height="32" alt=""> [**precog-trend-radar**](https://github.com/alex-quiterio/precog-trend-radar) | TypeScript | A morning brief of world attention trends. Tracks topics, never people. |
+| <img src="assets/logos/oikos.svg" width="32" height="32" alt=""> [**oikos**](https://alex-quiterio.github.io/oikos/) | TypeScript | Explorable maps of energy, nutrient and seed flows through eleven ecosystems, with unknowns marked. |
+| <img src="assets/logos/cybernetics-field-guide.svg" width="32" height="32" alt=""> [**cybernetics-field-guide**](https://github.com/alex-quiterio/cybernetics-field-guide) | HTML | Interactive field guide to cybernetics with working models. |
 
 </details>
 

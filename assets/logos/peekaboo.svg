@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-labelledby="t">
+  <title id="t">Peekaboo</title>
+  <!-- The colours are the dashboard's tokens (styles/tokens.css); an image cannot read CSS variables. -->
+  <rect x="2" y="2" width="124" height="124" rx="26" fill="#000000" stroke="#0f4a24" stroke-width="3"/>
+  <!-- the eyebrow, raised -->
+  <path d="M33 45 Q64 20 95 45" fill="none" stroke="#00ff66" stroke-width="5" stroke-linecap="round"/>
+  <!-- the eye, peeking over the router -->
+  <path d="M26 74 Q64 28 102 74 Z" fill="#b9ffcf"/>
+  <circle cx="64" cy="62" r="17" fill="#00ff66"/>
+  <circle cx="64" cy="62" r="7.5" fill="#001a08"/>
+  <circle cx="69" cy="57" r="3" fill="#ffffff"/>
+  <path d="M26 74 Q64 28 102 74" fill="none" stroke="#00ff66" stroke-width="4" stroke-linecap="round"/>
+  <!-- the router -->
+  <rect x="20" y="72" width="88" height="34" rx="9" fill="#06200f" stroke="#00ff66" stroke-width="4"/>
+  <circle cx="38" cy="89" r="3.6" fill="#00ff66"/>
+  <circle cx="51" cy="89" r="3.6" fill="#00ff66"/>
+  <circle cx="64" cy="89" r="3.6" fill="#58b877"/>
+  <!-- its antennas -->
+  <path d="M96 72 L102 52" stroke="#00ff66" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="103" cy="49" r="4" fill="#00ff66"/>
+  <path d="M32 72 L26 52" stroke="#00ff66" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="25" cy="49" r="4" fill="#00ff66"/>
+</svg>
