@@ -1,4 +1,4 @@
-"""Render a contribution streak card as SVG, styled to match the 3D night skyline.
+"""Render a contribution streak card as SVG, styled as a night-sky vigil: gold on deep indigo.
 
 Usage: GITHUB_TOKEN=... python3 scripts/streak.py <username> <output.svg>
 Uses only the standard library.
@@ -6,18 +6,19 @@ Uses only the standard library.
 
 import datetime as dt
 import json
+import math
 import os
 import sys
 import urllib.request
 
 API = "https://api.github.com/graphql"
 
-BG = "#00000f"
-FG = "#eeeeff"
-WEAK = "#aaaaaa"
-STRONG = "rgb(255,200,55)"
-BLUE = "#1f6feb"
-CYAN = "#39c5ff"
+BG = "#0a0618"
+FG = "#f3ecd8"
+WEAK = "#a99fc9"
+GOLD = "#e8c872"
+VIOLET = "#8b6cf0"
+INDIGO = "#3b2a8c"
 
 
 def graphql(query, variables):
@@ -115,12 +116,27 @@ def span(a, b):
 
 def render(stats):
     total = f"{stats['total']:,}"
-    total_sub = f"{fmt(stats['first'], True)} – present"
+    total_sub = f"since {fmt(stats['first'], True)}"
     cur = stats["current"]
     cur_sub = span(*stats["current_range"])
     longest = stats["longest"]
     longest_sub = span(*stats["longest_range"])
-    # Stars scattered behind the card, fixed so the image only changes with the numbers.
+    # Twelve spokes like a zodiac wheel; positions are fixed so the image only changes with the numbers.
+    cx, cy = 640, 92
+    spokes = "".join(
+        f'<line x1="{cx + 68 * math.cos(math.radians(a)):.1f}" y1="{cy + 68 * math.sin(math.radians(a)):.1f}" '
+        f'x2="{cx + (82 if a % 90 == 0 else 76) * math.cos(math.radians(a)):.1f}" '
+        f'y2="{cy + (82 if a % 90 == 0 else 76) * math.sin(math.radians(a)):.1f}" '
+        f'stroke="{GOLD}" stroke-width="{2 if a % 90 == 0 else 1}" stroke-opacity="0.8"/>'
+        for a in range(0, 360, 30)
+    )
+    # Two interlaced triangles make a hexagram inside the wheel.
+    def tri(offset):
+        pts = " ".join(
+            f"{cx + 52 * math.cos(math.radians(offset + k * 120)):.1f},{cy + 52 * math.sin(math.radians(offset + k * 120)):.1f}"
+            for k in range(3)
+        )
+        return f'<polygon points="{pts}" fill="none" stroke="{VIOLET}" stroke-opacity="0.55" stroke-width="1.2"/>'
     stars = "".join(
         f'<circle cx="{x}" cy="{y}" r="{r}" fill="{FG}" opacity="{o}"/>'
         for x, y, r, o in [
@@ -131,52 +147,59 @@ def render(stats):
         ]
     )
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="250" viewBox="0 0 1280 250">
-<title>Contribution streak: {cur} days current, {longest} days longest, {total} total</title>
+<title>Vigil: {cur} days current, {longest} days longest, {total} offerings in total</title>
 <style>
-  * {{ font-family: "Ubuntu", "Helvetica", "Arial", sans-serif; }}
-  .num {{ font-size: 54px; font-weight: 700; fill: {FG}; }}
-  .big {{ font-size: 64px; font-weight: 700; fill: {STRONG}; }}
-  .label {{ font-size: 22px; fill: {FG}; letter-spacing: 1px; }}
-  .sub {{ font-size: 17px; fill: {WEAK}; }}
-  .ring {{ animation: draw 1.6s ease-out forwards; }}
-  @keyframes draw {{ from {{ stroke-dashoffset: 534; }} to {{ stroke-dashoffset: 0; }} }}
+  * {{ font-family: "Cormorant Garamond", "Palatino", "Georgia", serif; }}
+  .num {{ font-size: 56px; font-weight: 600; fill: {FG}; }}
+  .big {{ font-size: 56px; font-weight: 600; fill: {GOLD}; }}
+  .label {{ font-size: 21px; fill: {GOLD}; letter-spacing: 5px; text-transform: uppercase; }}
+  .sub {{ font-size: 18px; font-style: italic; fill: {WEAK}; }}
+  .turn {{ transform-origin: {cx}px {cy}px; animation: turn 120s linear infinite; }}
+  .breath {{ animation: breath 6s ease-in-out infinite; }}
+  @keyframes turn {{ to {{ transform: rotate(360deg); }} }}
+  @keyframes breath {{ 0%, 100% {{ opacity: 0.55; }} 50% {{ opacity: 1; }} }}
+  @media (prefers-reduced-motion: reduce) {{ .turn, .breath {{ animation: none; }} }}
 </style>
 <defs>
-  <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="{CYAN}"/>
-    <stop offset="1" stop-color="{BLUE}"/>
-  </linearGradient>
-  <radialGradient id="glow">
-    <stop offset="0" stop-color="{BLUE}" stop-opacity="0.35"/>
-    <stop offset="1" stop-color="{BLUE}" stop-opacity="0"/>
+  <radialGradient id="aura">
+    <stop offset="0" stop-color="{VIOLET}" stop-opacity="0.45"/>
+    <stop offset="1" stop-color="{VIOLET}" stop-opacity="0"/>
   </radialGradient>
+  <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="{GOLD}" stop-opacity="0"/>
+    <stop offset="0.5" stop-color="{GOLD}" stop-opacity="0.7"/>
+    <stop offset="1" stop-color="{GOLD}" stop-opacity="0"/>
+  </linearGradient>
 </defs>
 <rect width="1280" height="250" rx="12" fill="{BG}"/>
+<rect width="1280" height="250" rx="12" fill="none" stroke="{INDIGO}" stroke-width="2"/>
 {stars}
-<line x1="427" y1="50" x2="427" y2="200" stroke="{WEAK}" stroke-opacity="0.25"/>
-<line x1="853" y1="50" x2="853" y2="200" stroke="{WEAK}" stroke-opacity="0.25"/>
 
 <g text-anchor="middle">
-  <text x="213" y="112" class="num">{total}</text>
-  <text x="213" y="152" class="label">Total contributions</text>
-  <text x="213" y="182" class="sub">{total_sub}</text>
+  <text x="213" y="60" class="sub">&#9790;</text>
+  <text x="213" y="124" class="num">{total}</text>
+  <text x="213" y="160" class="label">Offerings</text>
+  <text x="213" y="190" class="sub">{total_sub}</text>
 </g>
 
 <g text-anchor="middle">
-  <circle cx="640" cy="98" r="110" fill="url(#glow)"/>
-  <circle cx="640" cy="98" r="85" fill="none" stroke="{BLUE}" stroke-opacity="0.2" stroke-width="8"/>
-  <circle class="ring" cx="640" cy="98" r="85" fill="none" stroke="url(#ringGrad)" stroke-width="8"
-          stroke-linecap="round" stroke-dasharray="534" transform="rotate(-90 640 98)"/>
-  <text x="640" y="118" class="big">{cur}</text>
-  <text x="640" y="215" class="label" fill="{STRONG}" style="fill:{STRONG}">Current streak</text>
-  <text x="640" y="240" class="sub">{cur_sub}</text>
+  <circle class="breath" cx="{cx}" cy="{cy}" r="100" fill="url(#aura)"/>
+  <circle cx="{cx}" cy="{cy}" r="62" fill="none" stroke="{INDIGO}" stroke-width="2"/>
+  <circle cx="{cx}" cy="{cy}" r="57" fill="none" stroke="{GOLD}" stroke-opacity="0.5" stroke-width="1"/>
+  <g class="turn">{spokes}</g>
+  {tri(-90)}{tri(90)}
+  <text x="{cx}" y="{cy + 22}" class="big">{cur}</text>
+  <text x="{cx}" y="{cy + 118}" class="label">Current vigil</text>
+  <text x="{cx}" y="{cy + 142}" class="sub" style="font-size:16px">{cur_sub}</text>
 </g>
 
 <g text-anchor="middle">
-  <text x="1067" y="112" class="num">{longest}</text>
-  <text x="1067" y="152" class="label">Longest streak</text>
-  <text x="1067" y="182" class="sub">{longest_sub}</text>
+  <text x="1067" y="60" class="sub">&#10022;</text>
+  <text x="1067" y="124" class="num">{longest}</text>
+  <text x="1067" y="160" class="label">Longest vigil</text>
+  <text x="1067" y="190" class="sub">{longest_sub}</text>
 </g>
+
 </svg>
 """
 

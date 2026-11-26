@@ -116,7 +116,6 @@ Where I am heading, in rough order of how soon.
 - **Next: autonomy.** Beeline grows from a simulator toward real flight dynamics, state estimation and learned policies, with a PX4 bridge as the long-term goal.
 - **Always: local-first, privacy-first apps.** More tools that keep your data on your device and track topics, never people.
 - **Always: climate and the commons.** Software that leaves a measurable mark on the world: circular economy at work, ecosystem and energy-flow explorers on the side.
-- **Open: teaching by building.** Turning my repos into hands-on, learn-by-building guides, the way [NextWork](https://nextwork.ai/) frames projects: audit your own home network (peekaboo), break a distributed system on purpose (byzantine-quorums, blockchain-rs), build an agent harness with review gates (hearth, Baikonur). Plus more long-form writing on [Medium](https://medium.com/@arielquixote) and more growing of engineers.
 
 ### 🧰 Flight systems
 
