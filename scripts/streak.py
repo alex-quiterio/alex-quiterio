@@ -136,15 +136,39 @@ def render(stats):
     cur_sub = span(*stats["current_range"])
     longest = stats["longest"]
     longest_sub = span(*stats["longest_range"])
-    # Twelve spokes like a zodiac wheel; positions are fixed so the image only changes with the numbers.
-    cx, cy = 640, 92
-    spokes = "".join(
-        f'<line x1="{cx + 68 * math.cos(math.radians(a)):.1f}" y1="{cy + 68 * math.sin(math.radians(a)):.1f}" '
-        f'x2="{cx + (82 if a % 90 == 0 else 76) * math.cos(math.radians(a)):.1f}" '
-        f'y2="{cy + (82 if a % 90 == 0 else 76) * math.sin(math.radians(a)):.1f}" '
-        f'stroke="{GOLD}" stroke-width="{2 if a % 90 == 0 else 1}" stroke-opacity="0.8"/>'
-        for a in range(0, 360, 30)
+    cx, cy = 640, 94
+    # Sri Yantra: four upward and five downward triangles, ringed by lotus petals.
+    # Equilateral triangles by (apex, base) height on a unit circle, y up; hand-tuned so the apexes
+    # land on the sides of their neighbours.
+    up = [(1.00, -0.50), (0.60, -0.32), (0.30, -0.19), (0.06, -0.12)]
+    down = [(-1.00, 0.50), (-0.78, 0.34), (-0.52, 0.20), (-0.30, 0.10), (-0.14, 0.02)]
+
+    def triangle(apex, base, pointing_up, r):
+        half = abs(apex - base) / math.sqrt(3)
+        pts = [(0, apex), (-half, base), (half, base)]
+        return " ".join(f"{cx + x * r:.1f},{cy - y * r:.1f}" for x, y in pts)
+
+    yantra_r = 58
+    tris = "".join(
+        f'<polygon points="{triangle(ap, ba, True, yantra_r)}" fill="none" stroke="{GOLD}" stroke-opacity="0.75" stroke-width="1"/>'
+        for ap, ba in up
+    ) + "".join(
+        f'<polygon points="{triangle(ap, ba, False, yantra_r)}" fill="none" stroke="{VIOLET}" stroke-opacity="0.9" stroke-width="1"/>'
+        for ap, ba in down
     )
+    def petal(angle, r0, r1, half):
+        d = (f"M{cx - half},{cy - r0} Q{cx - half * 1.5},{cy - (r0 + r1) / 2} {cx},{cy - r1} "
+             f"Q{cx + half * 1.5},{cy - (r0 + r1) / 2} {cx + half},{cy - r0} Z")
+        return f'<path d="{d}" transform="rotate({angle} {cx} {cy})"/>'
+    # Sixteen small petals behind eight large ones, like the lotus rings of the yantra.
+    petals = (
+        f'<g fill="none" stroke="{VIOLET}" stroke-width="1" stroke-opacity="0.8">'
+        + "".join(petal(i * 22.5 + 11.25, 60, 76, 5) for i in range(16))
+        + "".join(petal(a, 60, 84, 8) for a in range(0, 360, 45))
+        + "</g>"
+    )
+    digits = len(str(cur))
+    num_size = 40 if digits <= 2 else 32
     stars = "".join(
         f'<circle cx="{x}" cy="{y}" r="{r}" fill="{FG}" opacity="{o}"/>'
         for x, y, r, o in [
@@ -191,13 +215,14 @@ def render(stats):
 </g>
 
 <g text-anchor="middle">
-  <circle class="breath" cx="{cx}" cy="{cy}" r="100" fill="url(#aura)"/>
-  <circle cx="{cx}" cy="{cy}" r="62" fill="none" stroke="{INDIGO}" stroke-width="2"/>
-  <circle cx="{cx}" cy="{cy}" r="57" fill="none" stroke="{GOLD}" stroke-opacity="0.5" stroke-width="1"/>
-  <g class="turn">{spokes}</g>
-  <text x="{cx}" y="{cy + 22}" class="big">{cur}</text>
-  <text x="{cx}" y="{cy + 118}" class="label">Current vigil</text>
-  <text x="{cx}" y="{cy + 142}" class="sub" style="font-size:16px">{cur_sub}</text>
+  <circle class="breath" cx="{cx}" cy="{cy}" r="104" fill="url(#aura)"/>
+  <g class="turn">{petals}</g>
+  <circle cx="{cx}" cy="{cy}" r="60" fill="none" stroke="{GOLD}" stroke-opacity="0.6" stroke-width="1.5"/>
+  {tris}
+  <circle cx="{cx}" cy="{cy}" r="29" fill="{BG}" stroke="{GOLD}" stroke-opacity="0.8" stroke-width="1.5"/>
+  <text x="{cx}" y="{cy + num_size * 0.34}" class="big" style="font-size:{num_size}px">{cur}</text>
+  <text x="{cx}" y="{cy + 120}" class="label">Current vigil</text>
+  <text x="{cx}" y="{cy + 141}" class="sub" style="font-size:16px">{cur_sub}</text>
 </g>
 
 <g text-anchor="middle">
