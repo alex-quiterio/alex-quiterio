@@ -40,9 +40,9 @@ Public repositories, by kind (tap a group to open it). Live demos are linked whe
 
 | Repo | Stack | What it is |
 | --- | --- | --- |
-| **baikonur** 🔒 | TypeScript · Temporal | A personal AI factory: label a GitHub issue and an agent crew triages it, writes a plan for human review, then implements, validates and opens a draft PR. Credential-less agents, durable workflows, a per-token cost ledger. |
-| **buchecha** 🔒 | Python | My Claude Code marketplace: 8 plugins and 36 skills, with zero dependencies. |
-| [**hearth**](https://github.com/alex-quiterio/hearth) | TypeScript · Claude | A local dashboard with Claude in a side panel running the same agent skills as the terminal. |
+| <img src="assets/logos/baikonur.svg" width="32" height="32" alt=""> **baikonur** 🔒 | TypeScript · Temporal | A personal AI factory: label a GitHub issue and an agent crew triages it, writes a plan for human review, then implements, validates and opens a draft PR. Credential-less agents, durable workflows, a per-token cost ledger. |
+| <img src="assets/logos/buchecha.svg" width="32" height="32" alt=""> **buchecha** 🔒 | Python | My Claude Code marketplace: 8 plugins and 36 skills, with zero dependencies. |
+| <img src="assets/logos/hearth.svg" width="32" height="32" alt=""> [**hearth**](https://github.com/alex-quiterio/hearth) | TypeScript · Claude | A local dashboard with Claude in a side panel running the same agent skills as the terminal. |
 
 *🔒 private repository.*
 
@@ -53,11 +53,11 @@ Public repositories, by kind (tap a group to open it). Live demos are linked whe
 
 | Repo | Stack | What it is |
 | --- | --- | --- |
-| [**blockchain-rs**](https://github.com/alex-quiterio/blockchain-rs) | Rust | A small, readable cryptocurrency: proof of work *and* stake, RANDAO beacons, stand-in validators, gossiping peers, and a web UI that explains every block. |
-| [**byzantine-quorums**](https://github.com/alex-quiterio/byzantine-quorums) | Java | Quorum replication that keeps serving correctly while some servers lie. |
-| [**chann**](https://github.com/alex-quiterio/chann) | Rust | Go-style multi-producer, multi-consumer channels with a real `select`, no `unsafe`. |
-| [**blockchain-transactions-rs**](https://github.com/alex-quiterio/blockchain-transactions-rs) | Rust | Accounts and transactions API on axum, sqlx and PostgreSQL. |
-| [**message-broker.rb**](https://github.com/alex-quiterio/message-broker.rb) | Ruby | A message broker on a Kafka backend. |
+| <img src="assets/logos/blockchain-rs.svg" width="32" height="32" alt=""> [**blockchain-rs**](https://github.com/alex-quiterio/blockchain-rs) | Rust | A small, readable cryptocurrency: proof of work *and* stake, RANDAO beacons, stand-in validators, gossiping peers, and a web UI that explains every block. |
+| <img src="assets/logos/byzantine-quorums.svg" width="32" height="32" alt=""> [**byzantine-quorums**](https://github.com/alex-quiterio/byzantine-quorums) | Java | Quorum replication that keeps serving correctly while some servers lie. |
+| <img src="assets/logos/chann.svg" width="32" height="32" alt=""> [**chann**](https://github.com/alex-quiterio/chann) | Rust | Go-style multi-producer, multi-consumer channels with a real `select`, no `unsafe`. |
+| <img src="assets/logos/blockchain-transactions-rs.svg" width="32" height="32" alt=""> [**blockchain-transactions-rs**](https://github.com/alex-quiterio/blockchain-transactions-rs) | Rust | Accounts and transactions API on axum, sqlx and PostgreSQL. |
+| <img src="assets/logos/message-broker.rb.svg" width="32" height="32" alt=""> [**message-broker.rb**](https://github.com/alex-quiterio/message-broker.rb) | Ruby | A message broker on a Kafka backend. |
 
 </details>
 
@@ -66,11 +66,11 @@ Public repositories, by kind (tap a group to open it). Live demos are linked whe
 
 | Repo | Stack | What it is |
 | --- | --- | --- |
-| [**At-Compiler**](https://github.com/alex-quiterio/At-Compiler) | C++ | A compiler for a tiny symbolic language targeting 32-bit x86. |
-| [**ttinylisp**](https://github.com/alex-quiterio/ttinylisp) | JavaScript | A Lisp interpreter small enough to read in one sitting. |
-| [**check-assertions**](https://github.com/alex-quiterio/check-assertions) | Java | Runtime-checked `@Assertion` annotations injected at class-load time. |
-| [**playgrounds**](https://github.com/alex-quiterio/playgrounds) | C · Go · Ruby · Prolog · Lisp | Algorithm and language exercises, each with its own tests. |
-| [**repomate**](https://github.com/alex-quiterio/repomate) | Ruby | Keeps a fleet of git repositories in sync from one command. |
+| <img src="assets/logos/At-Compiler.svg" width="32" height="32" alt=""> [**At-Compiler**](https://github.com/alex-quiterio/At-Compiler) | C++ | A compiler for a tiny symbolic language targeting 32-bit x86. |
+| <img src="assets/logos/ttinylisp.svg" width="32" height="32" alt=""> [**ttinylisp**](https://github.com/alex-quiterio/ttinylisp) | JavaScript | A Lisp interpreter small enough to read in one sitting. |
+| <img src="assets/logos/check-assertions.svg" width="32" height="32" alt=""> [**check-assertions**](https://github.com/alex-quiterio/check-assertions) | Java | Runtime-checked `@Assertion` annotations injected at class-load time. |
+| <img src="assets/logos/playgrounds.svg" width="32" height="32" alt=""> [**playgrounds**](https://github.com/alex-quiterio/playgrounds) | C · Go · Ruby · Prolog · Lisp | Algorithm and language exercises, each with its own tests. |
+| <img src="assets/logos/repomate.svg" width="32" height="32" alt=""> [**repomate**](https://github.com/alex-quiterio/repomate) | Ruby | Keeps a fleet of git repositories in sync from one command. |
 
 </details>
 
