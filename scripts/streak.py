@@ -114,6 +114,21 @@ def span(a, b):
     return f"{fmt(a, a.year != b.year)} – {fmt(b, True)}"
 
 
+def rune(kind, x, y):
+    """Elder Futhark runes drawn as strokes, so they render without a rune font."""
+    w, h = 20, 38
+    paths = {
+        # Fehu: fortune and abundance
+        "fehu": f"M0,{h} L0,0 M0,{h * 0.3} L{w},0 M0,{h * 0.62} L{w},{h * 0.32}",
+        # Uruz: strength and vitality
+        "uruz": f"M0,{h} L0,0 L{w},{h * 0.3} L{w},{h}",
+    }
+    return (
+        f'<path d="{paths[kind]}" transform="translate({x - w / 2},{y})" fill="none" stroke="{GOLD}" '
+        f'stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
+    )
+
+
 def render(stats):
     total = f"{stats['total']:,}"
     total_sub = f"since {fmt(stats['first'], True)}"
@@ -176,7 +191,7 @@ def render(stats):
 {stars}
 
 <g text-anchor="middle">
-  <text x="213" y="60" class="sub">&#9790;</text>
+  {rune("fehu", 213, 22)}
   <text x="213" y="124" class="num">{total}</text>
   <text x="213" y="160" class="label">Offerings</text>
   <text x="213" y="190" class="sub">{total_sub}</text>
@@ -194,7 +209,7 @@ def render(stats):
 </g>
 
 <g text-anchor="middle">
-  <text x="1067" y="60" class="sub">&#10022;</text>
+  {rune("uruz", 1067, 22)}
   <text x="1067" y="124" class="num">{longest}</text>
   <text x="1067" y="160" class="label">Longest vigil</text>
   <text x="1067" y="190" class="sub">{longest_sub}</text>
