@@ -1,48 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="250" viewBox="0 0 1280 250">
-<title>Contribution streak: 54 days current, 54 days longest, 23,412 total</title>
+<title>Vigil: 54 days current, 54 days longest, 23,413 offerings in total</title>
 <style>
-  * { font-family: "Ubuntu", "Helvetica", "Arial", sans-serif; }
-  .num { font-size: 54px; font-weight: 700; fill: #eeeeff; }
-  .big { font-size: 64px; font-weight: 700; fill: rgb(255,200,55); }
-  .label { font-size: 22px; fill: #eeeeff; letter-spacing: 1px; }
-  .sub { font-size: 17px; fill: #aaaaaa; }
-  .ring { animation: draw 1.6s ease-out forwards; }
-  @keyframes draw { from { stroke-dashoffset: 534; } to { stroke-dashoffset: 0; } }
+  * { font-family: "Cormorant Garamond", "Palatino", "Georgia", serif; }
+  .num { font-size: 56px; font-weight: 600; fill: #f3ecd8; }
+  .big { font-size: 56px; font-weight: 600; fill: #e8c872; }
+  .label { font-size: 21px; fill: #e8c872; letter-spacing: 5px; text-transform: uppercase; }
+  .sub { font-size: 18px; font-style: italic; fill: #a99fc9; }
+  .turn { transform-origin: 640px 92px; animation: turn 120s linear infinite; }
+  .breath { animation: breath 6s ease-in-out infinite; }
+  @keyframes turn { to { transform: rotate(360deg); } }
+  @keyframes breath { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .turn, .breath { animation: none; } }
 </style>
 <defs>
-  <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#39c5ff"/>
-    <stop offset="1" stop-color="#1f6feb"/>
-  </linearGradient>
-  <radialGradient id="glow">
-    <stop offset="0" stop-color="#1f6feb" stop-opacity="0.35"/>
-    <stop offset="1" stop-color="#1f6feb" stop-opacity="0"/>
+  <radialGradient id="aura">
+    <stop offset="0" stop-color="#8b6cf0" stop-opacity="0.45"/>
+    <stop offset="1" stop-color="#8b6cf0" stop-opacity="0"/>
   </radialGradient>
+  <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#e8c872" stop-opacity="0"/>
+    <stop offset="0.5" stop-color="#e8c872" stop-opacity="0.7"/>
+    <stop offset="1" stop-color="#e8c872" stop-opacity="0"/>
+  </linearGradient>
 </defs>
-<rect width="1280" height="250" rx="12" fill="#00000f"/>
-<circle cx="60" cy="40" r="1.2" fill="#eeeeff" opacity="0.6"/><circle cx="180" cy="210" r="1" fill="#eeeeff" opacity="0.4"/><circle cx="330" cy="30" r="1.4" fill="#eeeeff" opacity="0.7"/><circle cx="520" cy="220" r="1" fill="#eeeeff" opacity="0.5"/><circle cx="760" cy="26" r="1.2" fill="#eeeeff" opacity="0.5"/><circle cx="910" cy="214" r="1.4" fill="#eeeeff" opacity="0.6"/><circle cx="1080" cy="48" r="1" fill="#eeeeff" opacity="0.4"/><circle cx="1220" cy="200" r="1.2" fill="#eeeeff" opacity="0.7"/><circle cx="1240" cy="30" r="1" fill="#eeeeff" opacity="0.5"/><circle cx="450" cy="120" r="0.8" fill="#eeeeff" opacity="0.3"/><circle cx="830" cy="130" r="0.8" fill="#eeeeff" opacity="0.3"/><circle cx="40" cy="190" r="1" fill="#eeeeff" opacity="0.4"/>
-<line x1="427" y1="50" x2="427" y2="200" stroke="#aaaaaa" stroke-opacity="0.25"/>
-<line x1="853" y1="50" x2="853" y2="200" stroke="#aaaaaa" stroke-opacity="0.25"/>
+<rect width="1280" height="250" rx="12" fill="#0a0618"/>
+<rect width="1280" height="250" rx="12" fill="none" stroke="#3b2a8c" stroke-width="2"/>
+<circle cx="60" cy="40" r="1.2" fill="#f3ecd8" opacity="0.6"/><circle cx="180" cy="210" r="1" fill="#f3ecd8" opacity="0.4"/><circle cx="330" cy="30" r="1.4" fill="#f3ecd8" opacity="0.7"/><circle cx="520" cy="220" r="1" fill="#f3ecd8" opacity="0.5"/><circle cx="760" cy="26" r="1.2" fill="#f3ecd8" opacity="0.5"/><circle cx="910" cy="214" r="1.4" fill="#f3ecd8" opacity="0.6"/><circle cx="1080" cy="48" r="1" fill="#f3ecd8" opacity="0.4"/><circle cx="1220" cy="200" r="1.2" fill="#f3ecd8" opacity="0.7"/><circle cx="1240" cy="30" r="1" fill="#f3ecd8" opacity="0.5"/><circle cx="450" cy="120" r="0.8" fill="#f3ecd8" opacity="0.3"/><circle cx="830" cy="130" r="0.8" fill="#f3ecd8" opacity="0.3"/><circle cx="40" cy="190" r="1" fill="#f3ecd8" opacity="0.4"/>
 
 <g text-anchor="middle">
-  <text x="213" y="112" class="num">23,412</text>
-  <text x="213" y="152" class="label">Total contributions</text>
-  <text x="213" y="182" class="sub">Dec 27, 2011 – present</text>
+  <text x="213" y="60" class="sub">&#9790;</text>
+  <text x="213" y="124" class="num">23,413</text>
+  <text x="213" y="160" class="label">Offerings</text>
+  <text x="213" y="190" class="sub">since Dec 27, 2011</text>
 </g>
 
 <g text-anchor="middle">
-  <circle cx="640" cy="98" r="110" fill="url(#glow)"/>
-  <circle cx="640" cy="98" r="85" fill="none" stroke="#1f6feb" stroke-opacity="0.2" stroke-width="8"/>
-  <circle class="ring" cx="640" cy="98" r="85" fill="none" stroke="url(#ringGrad)" stroke-width="8"
-          stroke-linecap="round" stroke-dasharray="534" transform="rotate(-90 640 98)"/>
-  <text x="640" y="118" class="big">54</text>
-  <text x="640" y="215" class="label" fill="rgb(255,200,55)" style="fill:rgb(255,200,55)">Current streak</text>
-  <text x="640" y="240" class="sub">Oct 4 – Nov 26, 2026</text>
+  <circle class="breath" cx="640" cy="92" r="100" fill="url(#aura)"/>
+  <circle cx="640" cy="92" r="62" fill="none" stroke="#3b2a8c" stroke-width="2"/>
+  <circle cx="640" cy="92" r="57" fill="none" stroke="#e8c872" stroke-opacity="0.5" stroke-width="1"/>
+  <g class="turn"><line x1="708.0" y1="92.0" x2="722.0" y2="92.0" stroke="#e8c872" stroke-width="2" stroke-opacity="0.8"/><line x1="698.9" y1="126.0" x2="705.8" y2="130.0" stroke="#e8c872" stroke-width="1" stroke-opacity="0.8"/><line x1="674.0" y1="150.9" x2="678.0" y2="157.8" stroke="#e8c872" stroke-width="1" stroke-opacity="0.8"/><line x1="640.0" y1="160.0" x2="640.0" y2="174.0" stroke="#e8c872" stroke-width="2" stroke-opacity="0.8"/><line x1="606.0" y1="150.9" x2="602.0" y2="157.8" stroke="#e8c872" stroke-width="1" stroke-opacity="0.8"/><line x1="581.1" y1="126.0" x2="574.2" y2="130.0" stroke="#e8c872" stroke-width="1" stroke-opacity="0.8"/><line x1="572.0" y1="92.0" x2="558.0" y2="92.0" stroke="#e8c872" stroke-width="2" stroke-opacity="0.8"/><line x1="581.1" y1="58.0" x2="574.2" y2="54.0" stroke="#e8c872" stroke-width="1" stroke-opacity="0.8"/><line x1="606.0" y1="33.1" x2="602.0" y2="26.2" stroke="#e8c872" stroke-width="1" stroke-opacity="0.8"/><line x1="640.0" y1="24.0" x2="640.0" y2="10.0" stroke="#e8c872" stroke-width="2" stroke-opacity="0.8"/><line x1="674.0" y1="33.1" x2="678.0" y2="26.2" stroke="#e8c872" stroke-width="1" stroke-opacity="0.8"/><line x1="698.9" y1="58.0" x2="705.8" y2="54.0" stroke="#e8c872" stroke-width="1" stroke-opacity="0.8"/></g>
+  <polygon points="640.0,40.0 685.0,118.0 595.0,118.0" fill="none" stroke="#8b6cf0" stroke-opacity="0.55" stroke-width="1.2"/><polygon points="640.0,144.0 595.0,66.0 685.0,66.0" fill="none" stroke="#8b6cf0" stroke-opacity="0.55" stroke-width="1.2"/>
+  <text x="640" y="114" class="big">54</text>
+  <text x="640" y="210" class="label">Current vigil</text>
+  <text x="640" y="234" class="sub" style="font-size:16px">Oct 4 – Nov 26, 2026</text>
 </g>
 
 <g text-anchor="middle">
-  <text x="1067" y="112" class="num">54</text>
-  <text x="1067" y="152" class="label">Longest streak</text>
-  <text x="1067" y="182" class="sub">Oct 4 – Nov 26, 2026</text>
+  <text x="1067" y="60" class="sub">&#10022;</text>
+  <text x="1067" y="124" class="num">54</text>
+  <text x="1067" y="160" class="label">Longest vigil</text>
+  <text x="1067" y="190" class="sub">Oct 4 – Nov 26, 2026</text>
 </g>
+
 </svg>
