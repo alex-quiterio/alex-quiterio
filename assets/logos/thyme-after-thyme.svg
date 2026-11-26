@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 138" role="img" aria-label="Thyme After Thyme">
+  <rect x="56" y="3" width="16" height="10" rx="3" fill="#1f5456"/>
+  <rect x="60" y="11" width="8" height="9" rx="2" fill="#1f5456"/>
+  <circle cx="64" cy="76" r="58" fill="#fffdf8" stroke="#1f5456" stroke-width="6"/>
+  <line x1="64.0" y1="33.0" x2="64.0" y2="26.0" stroke="#1f5456" stroke-opacity=".45" stroke-width="3" stroke-linecap="round"/>
+  <line x1="107.0" y1="76.0" x2="114.0" y2="76.0" stroke="#1f5456" stroke-opacity=".45" stroke-width="3" stroke-linecap="round"/>
+  <line x1="64.0" y1="119.0" x2="64.0" y2="126.0" stroke="#1f5456" stroke-opacity=".45" stroke-width="3" stroke-linecap="round"/>
+  <line x1="21.0" y1="76.0" x2="14.0" y2="76.0" stroke="#1f5456" stroke-opacity=".45" stroke-width="3" stroke-linecap="round"/>
+  <line x1="64" y1="76" x2="87.8" y2="37.8" stroke="#1f5456" stroke-width="3.6" stroke-linecap="round"/>
+  <ellipse cx="77.4" cy="65.6" rx="7.0" ry="4.5" transform="rotate(14 77.4 65.6)" fill="#2f7173"/>
+  <ellipse cx="67.4" cy="59.4" rx="7.0" ry="4.5" transform="rotate(-130 67.4 59.4)" fill="#2f7173"/>
+  <ellipse cx="83.3" cy="56.3" rx="7.0" ry="4.5" transform="rotate(14 83.3 56.3)" fill="#2f7173"/>
+  <ellipse cx="73.3" cy="50.0" rx="7.0" ry="4.5" transform="rotate(-130 73.3 50.0)" fill="#2f7173"/>
+  <ellipse cx="89.1" cy="47.0" rx="7.0" ry="4.5" transform="rotate(14 89.1 47.0)" fill="#2f7173"/>
+  <ellipse cx="79.1" cy="40.7" rx="7.0" ry="4.5" transform="rotate(-130 79.1 40.7)" fill="#2f7173"/>
+  <ellipse cx="90.2" cy="34.1" rx="6.0" ry="4.2" transform="rotate(-58 90.2 34.1)" fill="#2f7173"/>
+  <line x1="64" y1="76" x2="45.6" y2="60.6" stroke="#1f5456" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="64" cy="76" r="5.8" fill="#c8382b" stroke="#fffdf8" stroke-width="2.5"/>
+</svg>

@@ -94,16 +94,16 @@ Public repositories, by kind (tap a group to open it). Live demos are linked whe
 
 | Repo | Stack | What it is |
 | --- | --- | --- |
-| [**mood-tracker**](https://alex-quiterio.github.io/mood-tracker/) | Expo · React Native | A private mood journal; each week becomes a reflection prompt for Claude. Data never leaves the device. |
-| [**daily-sky-wheel**](https://alex-quiterio.github.io/daily-sky-wheel/) | TypeScript | Daily astrology chart wheel in the browser. |
-| [**gatecast**](https://alex-quiterio.github.io/gatecast/) | TypeScript | Cast a Human Design chart in your browser. Nothing leaves your device. |
-| [**gratitude-trail**](https://gratitude-trail-vercel.vercel.app) | HTML | A physical gratitude card with a QR code and an append-only timeline. |
-| [**garden**](https://github.com/alex-quiterio/garden) | TypeScript | A pixel-art garden that follows the sky over Amsterdam: my personal site. |
-| [**wayfarers-atlas**](https://alex-quiterio.github.io/wayfarers-atlas/) | CSS | An interactive map of a notebook, installable as an app. |
-| [**murmuration**](https://github.com/alex-quiterio/murmuration) | TypeScript | Starling flocks as boids with topological neighbours. |
-| [**loopfield**](https://github.com/alex-quiterio/loopfield) | JavaScript | Electronic music as code: nine songs in Strudel. |
-| [**pixel-dino-splats**](https://github.com/alex-quiterio/pixel-dino-splats) | TypeScript | A pixel-art dinosaur made of 3D gaussian splats. |
-| [**thyme-after-thyme**](https://github.com/alex-quiterio/thyme-after-thyme) | TypeScript | A kitchen timer with proper kitchen sounds. |
+| <img src="assets/logos/mood-tracker.svg" width="32" height="32" alt=""> [**mood-tracker**](https://alex-quiterio.github.io/mood-tracker/) | Expo · React Native | A private mood journal; each week becomes a reflection prompt for Claude. Data never leaves the device. |
+| <img src="assets/logos/daily-sky-wheel.svg" width="32" height="32" alt=""> [**daily-sky-wheel**](https://alex-quiterio.github.io/daily-sky-wheel/) | TypeScript | Daily astrology chart wheel in the browser. |
+| <img src="assets/logos/gatecast.svg" width="32" height="32" alt=""> [**gatecast**](https://alex-quiterio.github.io/gatecast/) | TypeScript | Cast a Human Design chart in your browser. Nothing leaves your device. |
+| <img src="assets/logos/gratitude-trail.svg" width="32" height="32" alt=""> [**gratitude-trail**](https://gratitude-trail-vercel.vercel.app) | HTML | A physical gratitude card with a QR code and an append-only timeline. |
+| <img src="assets/logos/garden.svg" width="32" height="32" alt=""> [**garden**](https://github.com/alex-quiterio/garden) | TypeScript | A pixel-art garden that follows the sky over Amsterdam: my personal site. |
+| <img src="assets/logos/wayfarers-atlas.png" width="32" height="32" alt=""> [**wayfarers-atlas**](https://alex-quiterio.github.io/wayfarers-atlas/) | CSS | An interactive map of a notebook, installable as an app. |
+| <img src="assets/logos/murmuration.svg" width="32" height="32" alt=""> [**murmuration**](https://github.com/alex-quiterio/murmuration) | TypeScript | Starling flocks as boids with topological neighbours. |
+| <img src="assets/logos/loopfield.svg" width="32" height="32" alt=""> [**loopfield**](https://github.com/alex-quiterio/loopfield) | JavaScript | Electronic music as code: nine songs in Strudel. |
+| <img src="assets/logos/pixel-dino-splats.png" width="32" height="32" alt=""> [**pixel-dino-splats**](https://github.com/alex-quiterio/pixel-dino-splats) | TypeScript | A pixel-art dinosaur made of 3D gaussian splats. |
+| <img src="assets/logos/thyme-after-thyme.svg" width="32" height="32" alt=""> [**thyme-after-thyme**](https://github.com/alex-quiterio/thyme-after-thyme) | TypeScript | A kitchen timer with proper kitchen sounds. |
 
 </details>
 
