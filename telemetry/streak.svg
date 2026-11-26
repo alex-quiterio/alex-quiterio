@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="250" viewBox="0 0 1280 250">
-<title>Vigil: 54 days current, 54 days longest, 23,416 offerings in total</title>
+<title>Vigil: 54 days current, 54 days longest, 23,418 offerings in total</title>
 <style>
   * { font-family: "Cormorant Garamond", "Palatino", "Georgia", serif; }
   .num { font-size: 56px; font-weight: 600; fill: #f3ecd8; }
@@ -29,7 +29,7 @@
 
 <g text-anchor="middle">
   <path d="M0,38 L0,0 M0,11.4 L20,0 M0,23.56 L20,12.16" transform="translate(203.0,22)" fill="none" stroke="#e8c872" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="213" y="124" class="num">23,416</text>
+  <text x="213" y="124" class="num">23,418</text>
   <text x="213" y="160" class="label">Offerings</text>
   <text x="213" y="190" class="sub">since Dec 27, 2011</text>
 </g>
