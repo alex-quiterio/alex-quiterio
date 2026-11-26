@@ -145,13 +145,6 @@ def render(stats):
         f'stroke="{GOLD}" stroke-width="{2 if a % 90 == 0 else 1}" stroke-opacity="0.8"/>'
         for a in range(0, 360, 30)
     )
-    # Two interlaced triangles make a hexagram inside the wheel.
-    def tri(offset):
-        pts = " ".join(
-            f"{cx + 52 * math.cos(math.radians(offset + k * 120)):.1f},{cy + 52 * math.sin(math.radians(offset + k * 120)):.1f}"
-            for k in range(3)
-        )
-        return f'<polygon points="{pts}" fill="none" stroke="{VIOLET}" stroke-opacity="0.55" stroke-width="1.2"/>'
     stars = "".join(
         f'<circle cx="{x}" cy="{y}" r="{r}" fill="{FG}" opacity="{o}"/>'
         for x, y, r, o in [
@@ -202,7 +195,6 @@ def render(stats):
   <circle cx="{cx}" cy="{cy}" r="62" fill="none" stroke="{INDIGO}" stroke-width="2"/>
   <circle cx="{cx}" cy="{cy}" r="57" fill="none" stroke="{GOLD}" stroke-opacity="0.5" stroke-width="1"/>
   <g class="turn">{spokes}</g>
-  {tri(-90)}{tri(90)}
   <text x="{cx}" y="{cy + 22}" class="big">{cur}</text>
   <text x="{cx}" y="{cy + 118}" class="label">Current vigil</text>
   <text x="{cx}" y="{cy + 142}" class="sub" style="font-size:16px">{cur_sub}</text>
